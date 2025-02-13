@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import  basePath from '../../next.config';
 import { OverlayModul } from "./modules/overlay";
 
-const path = basePath?.basePath || '';
+const imgPath = basePath?.basePath || '';
 
 export default function Home() {
 
@@ -89,7 +89,7 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src={`${path}/globe.svg`}
+            src={`${imgPath}/globe.svg`}
             alt="Globe icon"
             width={16}
             height={16}
