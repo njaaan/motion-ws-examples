@@ -1,13 +1,13 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import  basePath from '../../next.config';
+import  nextConfig from '../../next.config';
 import { OverlayModul } from "./modules/overlay";
 
-const imgPath = basePath?.basePath || '';
+const imgPath = nextConfig?.basePath || '';
 
 export default function Home() {
 
-  console.log("current basePath: ", basePath.basePath)
+  console.log("current basePath: ", imgPath)
   return (
     <div className={styles.page}>
       <OverlayModul />
