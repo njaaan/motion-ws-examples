@@ -1,8 +1,13 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import  basePath from '../../next.config';
 import { OverlayModul } from "./modules/overlay";
 
+const path = basePath?.basePath || '';
+
 export default function Home() {
+
+  console.log("current basePath: ", basePath.basePath)
   return (
     <div className={styles.page}>
       <OverlayModul />
@@ -84,7 +89,7 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src="/globe.svg"
+            src={`${path}/globe.svg`}
             alt="Globe icon"
             width={16}
             height={16}
